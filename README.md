@@ -12,8 +12,38 @@
 ## Number 1
 create the map above with criteria WISE as DNS Server, Westalis as DHCP Server, Berlint as Proxy Server.
 
+```bash
+# WISE - DNS Server
+apt-get update
+apt-get install bind9 -y
+service bind9 restart
+
+# Berlint - Proxy Server
+apt-get update
+apt-get install squid -y
+service squid start
+
+# Westalis - DHCP Server
+apt-get update
+apt-get install isc-dhcp-server -y
+service isc-dhcp-server start
+
+	# Westalis => /etc/default/isc-dhcp-server
+```
+Result:
+
+![](https://i.ibb.co/80LKSn0/Screenshot-2022-11-12-at-11-27-03.png)
+
 ## Number 2
 Create Ostania as DHCP Relay.
+
+```bash
+# Ostania - DHCP Relay
+apt-get update
+apt-get install isc-dhcp-relay -y
+service isc-dhcp-relay start
+# Ostania => /etc/default/isc-dhcp-relay
+```
 
 ## Number 3
 Client that go through Switch1 have the IP range from [prefix IP].1.50 - [prefix IP].1.88 and [prefix IP].1.120 - [prefix IP].1.155
