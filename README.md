@@ -84,6 +84,20 @@ subnet 10.39.3.0 netmask 255.255.255.0 {
 ## Number 5
 Client gets the DNS from WISE and client can connect to the internet through the DNS. 
 
+```bash 
+# Westalis => /etc/dhcp/dhcpd.conf
+subnet 10.39.1.0 netmask 255.255.255.0 {
+    ...
+    option domain-name-servers 10.39.2.2;
+    ...
+}
+subnet 10.39.3.0 netmask 255.255.255.0 {
+    ...
+    option domain-name-servers 10.39.2.2;
+    ...
+}
+```
+
 ## Number 6
 The length of time the DHCP server lends an IP address to client via Switch1 is 5 minutes, while the client via Switch3 is 10 minutes. With a maximum time allocated for borrowing an IP address is 115 minutes.
 
