@@ -131,6 +131,18 @@ hwaddress on Eden :
 
 ![hwaddress](https://user-images.githubusercontent.com/73649094/201453640-9f5001b7-abde-46f7-8967-bcfb60408c9c.jpg)
 
+```bash
+# Westalis => /etc/dhcp/dhcpd.conf
+host Eden {
+    hardware ethernet 32:0d:7a:0d:8c:93;
+    fixed-address 10.39.3.13;
+}
+
+# Eden => network configuration
+auto eth0
+iface eth0 inet dhcp
+hwaddress ether 32:0d:7a:0d:8c:93
+```
 
 Result : 
 
