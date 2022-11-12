@@ -45,6 +45,10 @@ service isc-dhcp-relay start
 # Ostania => /etc/default/isc-dhcp-relay
 ```
 
+Result:
+
+![](https://i.ibb.co/Hgqt73p/Screenshot-2022-11-12-at-11-29-35.png)
+
 ## Number 3
 Client that go through Switch1 have the IP range from [prefix IP].1.50 - [prefix IP].1.88 and [prefix IP].1.120 - [prefix IP].1.155
 
