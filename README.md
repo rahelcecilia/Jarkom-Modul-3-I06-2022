@@ -101,6 +101,22 @@ subnet 10.39.3.0 netmask 255.255.255.0 {
 ## Number 6
 The length of time the DHCP server lends an IP address to client via Switch1 is 5 minutes, while the client via Switch3 is 10 minutes. With a maximum time allocated for borrowing an IP address is 115 minutes.
 
+```bash
+# Westalis => /etc/dhcp/dhcpd.conf
+subnet 10.39.1.0 netmask 255.255.255.0 {
+    …
+    default-lease-time 300;
+    max-lease-time 6900;
+}
+
+subnet 10.39.3.0 netmask 255.255.255.0 {
+    ...
+    default-lease-time 600;
+    max-lease-time 6900;
+
+}
+```
+
 ## IP Result from DHCP
 ![hasil SSS](https://user-images.githubusercontent.com/73649094/201453684-211a8419-0041-44a8-bbbd-41d356997bf8.jpg)
 ![hasil garden](https://user-images.githubusercontent.com/73649094/201453687-91d635ad-8a41-4a82-aecf-aa2296732367.jpg)
