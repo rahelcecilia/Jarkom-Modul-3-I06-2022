@@ -49,8 +49,25 @@ Result:
 
 ![](https://i.ibb.co/Hgqt73p/Screenshot-2022-11-12-at-11-29-35.png)
 
+All existing clients MUST use the IP configuration from the DHCP Server.
+
+```bash
+# SSS, Garden, Eden, NewtonCastle, KemonoPark => network configuration
+	auto eth0
+iface eth0 inet dhcp
+```
+
 ## Number 3
 Client that go through Switch1 have the IP range from [prefix IP].1.50 - [prefix IP].1.88 and [prefix IP].1.120 - [prefix IP].1.155
+
+```bash
+# Westalis => /etc/dhcp/dhcpd.conf
+subnet 10.39.1.0 netmask 255.255.255.0 {
+    range 10.39.1.50 10.39.1.88;
+    range 10.39.1.120 10.39.1.155;
+    ...
+}
+```
 
 ## Number 4
 Client that go through Switch3 have the IP range from [prefix IP].3.10 - [prefix IP].3.30 dan [prefix IP].3.60 - [prefix IP].3.85
