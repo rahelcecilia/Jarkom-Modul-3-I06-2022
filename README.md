@@ -58,7 +58,7 @@ iface eth0 inet dhcp
 ```
 
 ## Number 3
-Client that go through Switch1 have the IP range from [prefix IP].1.50 - [prefix IP].1.88 and [prefix IP].1.120 - [prefix IP].1.155
+Client that go through Switch1 have the IP range from 10.39.1.50 - 10.39.1.88 and 10.39.1.120 - 10.39.1.155
 
 ```bash
 # Westalis => /etc/dhcp/dhcpd.conf
@@ -70,7 +70,7 @@ subnet 10.39.1.0 netmask 255.255.255.0 {
 ```
 
 ## Number 4
-Client that go through Switch3 have the IP range from [prefix IP].3.10 - [prefix IP].3.30 dan [prefix IP].3.60 - [prefix IP].3.85
+Client that go through Switch3 have the IP range from 10.39.3.10 - 10.39.3.30 dan 10.39.3.60 - 10.39.3.85
 
 ```bash
 # Westalis => /etc/dhcp/dhcpd.conf
@@ -125,7 +125,7 @@ subnet 10.39.3.0 netmask 255.255.255.0 {
 
 
 ## Number 7
-Eden as a server for exchanging information with a fixed IP address with IP [prefix IP].3.13
+Eden as a server for exchanging information with a fixed IP address with IP 10.39.3.13
 
 hwaddress on Eden :
 
@@ -147,8 +147,3 @@ hwaddress ether 32:0d:7a:0d:8c:93
 Result : 
 
 ![hasil fixed address](https://user-images.githubusercontent.com/73649094/201453600-46b66fa0-3954-49ef-81b9-f5f846e2a5bb.jpg)
-
-
-## Number 8
-
-
